@@ -1,18 +1,17 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 import {
   Text,
   View,
   Image,
   StyleSheet,
-  TouchableHighlight
-} from 'react-native';
+  TouchableHighlight } from 'react-native'
 
 export default class Player extends Component {
   // constructor() {
   //   super()
   //   console.log(this.props)
   // }
-  render() {
+  render () {
     return (
       <View className="player" style={style.container}>
         <View style={style.imageContainer}>

@@ -20,13 +20,11 @@ export default class Header extends Component {
 
 const style = StyleSheet.create({
   header: {
-    // flex: 1,
     backgroundColor: '#3D5667',
     flexDirection: 'row',
     justifyContent: 'space-between',
     paddingTop: 30,
     padding: 10
-    // margin: 20,
   },
   pageTitle: {
     flex: 1,
@@ -40,4 +38,4 @@ const style = StyleSheet.create({
     height: 70,
     backgroundColor: 'transparent'
   }
-});
+})

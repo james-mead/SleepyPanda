@@ -1,10 +1,9 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 import {
   Text,
   View,
   Image,
-  StyleSheet
-} from 'react-native';
+  StyleSheet } from 'react-native'
 
 import Header from './Header'
 import SoundList from './SoundList'
@@ -25,7 +24,7 @@ const style = StyleSheet.create({
     flex: 1,
     backgroundColor: '#AAB3BA'
   }
-});
+})
 
 // #280E0D
 // #6E5745
