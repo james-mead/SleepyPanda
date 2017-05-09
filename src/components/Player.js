@@ -7,24 +7,20 @@ import {
   TouchableHighlight } from 'react-native'
 
 export default class Player extends Component {
-  // constructor() {
-  //   super()
-  //   console.log(this.props)
-  // }
   render () {
     return (
       <View className="player" style={style.container}>
         <View style={style.imageContainer}>
           <Image source={this.props.image} style={style.image} />
         </View>
-        <TouchableHighlight underlayColor="white" onPress={() => {
-          _logMe()
-        }}>
         {this.props.status === 'playing'
-          ? <Text style={style.button}>Pause</Text>
-          : <Text style={style.button}>Play</Text>
+        ? <TouchableHighlight underlayColor="white" onPress={() => { _pauseSound() }}>
+            <Text style={style.playButton}>Pause</Text>
+          </TouchableHighlight>
+        : <TouchableHighlight underlayColor="white" onPress={() => { _playSound() }}>
+            <Text style={style.playButton}>Play</Text>
+          </TouchableHighlight>
         }
-        </TouchableHighlight>
       </View>
     );
   }
@@ -33,32 +29,28 @@ export default class Player extends Component {
 const style = StyleSheet.create({
   container: {
     flex: 1,
-    flexWrap: 'wrap',
+    // flexWrap: 'wrap',
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
+    backgroundColor: 'gray',
+    borderTopWidth: StyleSheet.hairlineWidth,
+    borderTopColor: '#FFFFFF',
     position: 'absolute',
     bottom: 0,
     left: 0,
     right: 0,
     padding: 10,
-    height: 100,
-    backgroundColor: '#FFF5E8',
-    borderTopLeftRadius: 10,
-    borderTopRightRadius: 10
-  },
-  image: {
-    height: 70,
-    width: 70,
-    borderRadius: 35
+    height: 100
   },
   imageContainer: {
+    backgroundColor: 'gray',
+    borderRadius: 10,
     position: 'absolute',
     left: 10,
     alignItems: 'center',
     height: 70,
     width: 70,
-    borderRadius: 35,
     shadowColor: '#000000',
     shadowOpacity: 0.8,
     shadowRadius: 2,
@@ -67,8 +59,13 @@ const style = StyleSheet.create({
       width: 2
       }
     },
-    button: {
+    image: {
+      height: 70,
+      width: 70,
+      borderRadius: 10
+    },
+    playButton: {
       alignItems: 'center',
-      justifyContent: 'center'
+      color: '#f0f8ff'
     }
 });
