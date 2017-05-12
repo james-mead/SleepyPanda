@@ -4,49 +4,43 @@ export default sounds = [
   {
     id: id++,
     name: 'Gentle Rain',
-    image: require('../images/image1.jpg'),
+    image: require('../images/GentleRain.jpg'),
     media: require('../sounds/GentleRain.mp3')
   },
   {
     id: id++,
     name: 'Heavy Rain',
-    image: require('../images/image1.jpg'),
-    media: require('../sounds/GentleRain.mp3')
+    image: require('../images/HeavyRain.jpg'),
+    media: require('../sounds/HeavyRain.mp3')
   },
   {
     id: id++,
     name: 'Distant Thunder',
-    image: require('../images/image1.jpg'),
-    media: require('../sounds/GentleRain.mp3')
+    image: require('../images/DistantThunder.jpg'),
+    media: require('../sounds/DistantThunder.mp3')
   },
   {
     id: id++,
     name: 'Rain on Tent',
-    image: require('../images/image1.jpg'),
-    media: require('../sounds/GentleRain.mp3')
+    image: require('../images/RainOnTent.jpg'),
+    media: require('../sounds/RainOnTent.mp3')
   },
   {
     id: id++,
-    name: 'Wind',
-    image: require('../images/image1.jpg'),
-    media: require('../sounds/GentleRain.mp3')
+    name: 'Native Birds',
+    image: require('../images/NativeBirds.jpg'),
+    media: require('../sounds/NativeBirds.mp3')
   },
   {
     id: id++,
-    name: 'Crickets',
-    image: require('../images/image1.jpg'),
-    media: require('../sounds/GentleRain.mp3')
+    name: 'Ocean Waves on Rocks',
+    image: require('../images/OceanWavesOnRocks.jpg'),
+    media: require('../sounds/OceanWavesOnRocks.mp3')
   },
   {
     id: id++,
-    name: 'Birds',
-    image: require('../images/image1.jpg'),
-    media: require('../sounds/GentleRain.mp3')
-  },
-  {
-    id: id++,
-    name: 'Ocean Waves',
-    image: require('../images/image1.jpg'),
-    media: require('../sounds/GentleRain.mp3')
+    name: 'Ocean Waves on Shore',
+    image: require('../images/OceanWavesOnShore.jpg'),
+    media: require('../sounds/OceanWavesOnShore.mp3')
   }
 ]
