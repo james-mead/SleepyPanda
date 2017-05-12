@@ -12,6 +12,7 @@ import {
 import soundData from '../data/sounds'
 import Player from './Player'
 
+const Platform = require('Platform')
 const Sound = require('react-native-sound')
 Sound.setCategory('Playback', true) // true = mixWithOthers
 
@@ -99,7 +100,7 @@ export default class SoundList extends Component {
     }
   }
 
-  _renderRow(sound, sectionID, rowID, highlightRow) {
+  _renderRow (sound, sectionID, rowID, highlightRow) {
     return (
       <TouchableHighlight key={rowID} underlayColor="white" onPress={() => {
         highlightRow(sectionID, rowID)
@@ -115,16 +116,16 @@ export default class SoundList extends Component {
     )
   }
 
-  _renderSeperator(sectionID, rowID, adjacentRowHighlighted) {
+  _renderSeperator (sectionID, rowID, adjacentRowHighlighted) {
     return (
       <View key={`${sectionID}-${rowID}`} style={{
         height: adjacentRowHighlighted ? 3 : 1,
-        backgroundColor: adjacentRowHighlighted ? '#CCCCCC' : '#CCCCCC',
+        backgroundColor: adjacentRowHighlighted ? '#CCCCCC' : '#CCCCCC'
       }} />
     )
   }
 
-  render() {
+  render () {
     return (
       <View style={style.container}>
         <ScrollView style={this.state.status !== 'stopped'
@@ -138,11 +139,12 @@ export default class SoundList extends Component {
           />
         </ScrollView>
         {this.state.status !== 'stopped'
-          ? <Player status={this.state.status} image={this.state.soundImage}/>
+          ? <Player status={this.state.status} image={this.state.soundImage} />
           : null
         }
       </View>
-    )}
+    )
+  }
 }
 
 const style = StyleSheet.create({
@@ -171,6 +173,7 @@ const style = StyleSheet.create({
     marginLeft: 20,
     padding: 5,
     textAlign: 'left',
+    fontFamily: (Platform.OS === 'ios') ? 'GillSans-Light' : 'sans-serif-light',
     fontSize: 15,
     letterSpacing: 1.5
   },

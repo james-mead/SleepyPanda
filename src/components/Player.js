@@ -5,6 +5,9 @@ import {
   Image,
   StyleSheet,
   TouchableHighlight } from 'react-native'
+import Icon from 'react-native-vector-icons/FontAwesome'
+
+import { _pauseSound, _playSound } from './SoundList'
 
 export default class Player extends Component {
   render () {
@@ -15,14 +18,14 @@ export default class Player extends Component {
         </View>
         {this.props.status === 'playing'
         ? <TouchableHighlight underlayColor="white" onPress={() => { _pauseSound() }}>
-            <Text style={style.playButton}>Pause</Text>
+            <Icon className="icon" name="pause" size={30} color="#FFF" />
           </TouchableHighlight>
         : <TouchableHighlight underlayColor="white" onPress={() => { _playSound() }}>
-            <Text style={style.playButton}>Play</Text>
+            <Icon className="icon" name="play" size={30} color="#FFF" />
           </TouchableHighlight>
         }
       </View>
-    );
+    )
   }
 }
 
