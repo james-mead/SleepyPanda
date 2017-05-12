@@ -24,7 +24,7 @@ const style = StyleSheet.create({
     flex: 1
   }
 })
-
+// #3D5667
 // #280E0D
 // #6E5745
 // #AF9F95

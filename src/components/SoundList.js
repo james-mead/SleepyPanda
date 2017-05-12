@@ -76,7 +76,7 @@ export default class SoundList extends Component {
         if (volume >= 1) {
           clearInterval(fader)
         }
-      }, 100)
+      }, 200)
     }
 
     _pauseSound = () => {

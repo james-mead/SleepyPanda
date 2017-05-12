@@ -7,7 +7,7 @@ import {
   TouchableHighlight } from 'react-native'
 import Icon from 'react-native-vector-icons/FontAwesome'
 
-import { _pauseSound, _playSound } from './SoundList'
+// import { _pauseSound, _playSound } from './SoundList'
 
 export default class Player extends Component {
   render () {
@@ -36,7 +36,7 @@ const style = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: 'gray',
+    backgroundColor: '#7A8B98',
     borderTopWidth: StyleSheet.hairlineWidth,
     borderTopColor: '#FFFFFF',
     position: 'absolute',
