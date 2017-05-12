@@ -31,8 +31,6 @@
 		00C302E91ABCBA2D00DB3ED1 /* libRCTNetwork.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302DC1ABCB9D200DB3ED1 /* libRCTNetwork.a */; };
 		00C302EA1ABCBA2D00DB3ED1 /* libRCTVibration.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302E41ABCB9EE00DB3ED1 /* libRCTVibration.a */; };
 		00E356F31AD99517003FC87E /* SleepyPandaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* SleepyPandaTests.m */; };
-		01F14273B9EA4C10B6BE3FE8 /* SimpleLineIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B7F98C1343D7497A8D2241F6 /* SimpleLineIcons.ttf */; };
-		0E90EE0244534BC58012F29C /* MaterialCommunityIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1435ED5E1B714720B2B796D7 /* MaterialCommunityIcons.ttf */; };
 		133E29F31AD74F7200F7D852 /* libRCTLinking.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 78C398B91ACF4ADC00677621 /* libRCTLinking.a */; };
 		139105C61AF99C1200B5F7CC /* libRCTSettings.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 139105C11AF99BAD00B5F7CC /* libRCTSettings.a */; };
 		139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 139FDEF41B06529B00C62182 /* libRCTWebSocket.a */; };
@@ -41,7 +39,6 @@
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		140ED2AC1D01E1AD002B40FF /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
 		146834051AC3E58100842450 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
-		2AEEDC8D576047BAB415C56B /* Foundation.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 96C8FF039C3840B18896C4BB /* Foundation.ttf */; };
 		2D02E4BC1E0B4A80006451C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
@@ -54,16 +51,9 @@
 		2D02E4C81E0B4AEC006451C7 /* libRCTWebSocket-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DAD3E991DF850E9000B6D8A /* libRCTWebSocket-tvOS.a */; };
 		2D02E4C91E0B4AEC006451C7 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DAD3EA31DF850E9000B6D8A /* libReact.a */; };
 		2DCD954D1E0B4F2C00145EB5 /* SleepyPandaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* SleepyPandaTests.m */; };
-		4608C859A0054D9481E03B8F /* Entypo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 50E2A0EC27694E46B1B99324 /* Entypo.ttf */; };
-		4EC5D1738BA84F66B5CB65BE /* EvilIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7493BD5211FB4AEC94CB614C /* EvilIcons.ttf */; };
 		57A135CB776546B5989C92B3 /* libRNVectorIcons.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D00D6465EDB54EA4A0F8556C /* libRNVectorIcons.a */; };
 		5E9157361DD0AC6A00FF2AA8 /* libRCTAnimation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E9157331DD0AC6500FF2AA8 /* libRCTAnimation.a */; };
-		6788EFAEB0CC4E7993C3FA1E /* Octicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6D02C7CFF1804EF4B5B86956 /* Octicons.ttf */; };
-		6BF6F65E472748B78665779C /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D88C96682F874A40B9197B12 /* Zocial.ttf */; };
-		704A6B31D18C46BFACD61F89 /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 31C20E7EFCC74F9FB43F311E /* FontAwesome.ttf */; };
-		72AC384A2C5C42139752982B /* MaterialIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0557D064DC434B97BE62E00D /* MaterialIcons.ttf */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
-		A9D7208BDB9E4662BF12A930 /* Ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1571CE8FCC2747DE86B474A1 /* Ionicons.ttf */; };
 		FDD0622368194E6CB30B28F4 /* libRNSound.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 11A23FD0606448CB80AB85C9 /* libRNSound.a */; };
 /* End PBXBuildFile section */
 
@@ -702,7 +692,7 @@
 		83CBB9F71A601CBA00E9B192 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 610;
+				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = Facebook;
 				TargetAttributes = {
 					00E356ED1AD99517003FC87E = {
@@ -1025,17 +1015,7 @@
 				0049CE361EC5797B005F0576 /* NativeBirds.mp3 in Resources */,
 				0049CDB61EC557FE005F0576 /* FontAwesome.ttf in Resources */,
 				0049CE3A1EC5797B005F0576 /* Thunder.mp3 in Resources */,
-				4608C859A0054D9481E03B8F /* Entypo.ttf in Resources */,
-				4EC5D1738BA84F66B5CB65BE /* EvilIcons.ttf in Resources */,
-				704A6B31D18C46BFACD61F89 /* FontAwesome.ttf in Resources */,
-				2AEEDC8D576047BAB415C56B /* Foundation.ttf in Resources */,
-				A9D7208BDB9E4662BF12A930 /* Ionicons.ttf in Resources */,
-				0E90EE0244534BC58012F29C /* MaterialCommunityIcons.ttf in Resources */,
-				72AC384A2C5C42139752982B /* MaterialIcons.ttf in Resources */,
-				6788EFAEB0CC4E7993C3FA1E /* Octicons.ttf in Resources */,
 				0049CE341EC5797B005F0576 /* GentleRain.mp3 in Resources */,
-				01F14273B9EA4C10B6BE3FE8 /* SimpleLineIcons.ttf in Resources */,
-				6BF6F65E472748B78665779C /* Zocial.ttf in Resources */,
 				0049CE351EC5797B005F0576 /* HeavyRain.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1164,6 +1144,7 @@
 					"-ObjC",
 					"-lc++",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SleepyPanda.app/SleepyPanda";
 			};
@@ -1191,6 +1172,7 @@
 					"-ObjC",
 					"-lc++",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SleepyPanda.app/SleepyPanda";
 			};
@@ -1390,15 +1372,19 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -1431,8 +1417,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -1440,6 +1428,7 @@
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;

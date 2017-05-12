@@ -14,7 +14,7 @@ import Player from './Player'
 
 const Platform = require('Platform')
 const Sound = require('react-native-sound')
-Sound.setCategory('Playback', true) // true = mixWithOthers
+Sound.setCategory('Playback', false) // enable background Sound but don't mix audio sessions
 
 export default class SoundList extends Component {
   constructor() {
