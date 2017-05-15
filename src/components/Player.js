@@ -9,7 +9,7 @@ import Icon from 'react-native-vector-icons/FontAwesome'
 export default class Player extends Component {
   render () {
     return (
-      <View className="player" style={style.container}>
+      <View style={style.container}>
         <View style={style.imageContainer}>
           <Image source={this.props.image} style={style.image} />
         </View>

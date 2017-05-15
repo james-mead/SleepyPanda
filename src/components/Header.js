@@ -8,7 +8,7 @@ import {
 export default class Header extends Component {
   render () {
     return (
-      <View className="header" style={style.header}>
+      <View style={style.header}>
         <Image source={require('../images/Panda.png')} style={style.appLogo} />
         <Text style={style.appTitle}>
           Sleepy Panda
@@ -28,7 +28,6 @@ const style = StyleSheet.create({
     padding: 10
   },
   appTitle: {
-    // flex: 1,
     color: '#f0f8ff',
     fontFamily: 'AmericanTypewriter-Bold',
     fontSize: 10,
@@ -36,7 +35,6 @@ const style = StyleSheet.create({
     textAlign: 'left'
   },
   appLogo: {
-    // width: 70,
     height: 70,
     backgroundColor: 'transparent'
   }
