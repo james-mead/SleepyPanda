@@ -14,10 +14,10 @@ export default class Player extends Component {
           <Image source={this.props.image} style={style.image} />
         </View>
         {this.props.status === 'playing'
-        ? <TouchableHighlight underlayColor="white" onPress={() => { _pauseSound() }}>
+        ? <TouchableHighlight underlayColor="white" onPress={() => { pauseSound() }}>
             <Icon className="icon" name="pause" size={30} color="#FFF" />
           </TouchableHighlight>
-        : <TouchableHighlight underlayColor="white" onPress={() => { _playSound() }}>
+        : <TouchableHighlight underlayColor="white" onPress={() => { playSound() }}>
             <Icon className="icon" name="play" size={30} color="#FFF" />
           </TouchableHighlight>
         }

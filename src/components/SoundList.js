@@ -26,20 +26,20 @@ export default class SoundList extends Component {
      soundIndex: null
     }
 
-    _rowHandleClick = (sound) => {
+    rowHandleClick = (sound) => {
       if (this.state.soundIndex !== null && this.state.soundIndex !== sound.id) {
         console.log('media selection has changed')
-        _stopSound()
-        _loadSound(sound)
-        _playSound()
+        stopSound()
+        loadSound(sound)
+        playSound()
       } else if (this.state.status === 'stopped' || this.state.status === 'paused') {
-        _loadSound(sound)
+        loadSound(sound)
       } else {
-        _pauseSound()
+        pauseSound()
       }
     }
 
-    _loadSound = (sound) => {
+    loadSound = (sound) => {
       console.log('loading', sound.media)
       const s = new Sound(sound.media, (e) => {
         if (e) {
@@ -52,11 +52,11 @@ export default class SoundList extends Component {
           soundIndex: sound.id,
           soundImage: sound.image
         })
-        _playSound()
+        playSound()
       })
     }
 
-    _playSound = () => {
+    playSound = () => {
       const s = this.state.loadedSound
       console.log('playing', s)
         this.setState({
@@ -78,7 +78,7 @@ export default class SoundList extends Component {
       }, 200)
     }
 
-    _pauseSound = () => {
+    pauseSound = () => {
       this.setState({
         status: 'paused',
         loadedSound: this.state.loadedSound.pause()
@@ -86,7 +86,7 @@ export default class SoundList extends Component {
       // console.log('paused', this.state.status)
     }
 
-    _stopSound = () => {
+    stopSound = () => {
       this.setState({
         loadedSound: this.state.loadedSound.stop().release()
       })
@@ -103,7 +103,7 @@ export default class SoundList extends Component {
     return (
       <TouchableHighlight key={rowID} underlayColor="white" onPress={() => {
         highlightRow(sectionID, rowID)
-        _rowHandleClick(sound)
+        rowHandleClick(sound)
       }}>
       <View>
         <SoundListItem sound={sound} />
