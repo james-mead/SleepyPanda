@@ -1,19 +1,18 @@
 import React, { Component } from 'react'
 import {
-  Text,
   View,
   ListView,
   ScrollView,
-  Image,
   TouchableHighlight,
   StyleSheet
 } from 'react-native'
 
 import soundData from '../data/sounds'
+import SoundListItem from './SoundListItem'
 import Player from './Player'
 
-const Platform = require('Platform')
 const Sound = require('react-native-sound')
+
 Sound.setCategory('Playback', false) // enable background Sound but don't mix audio sessions
 
 export default class SoundList extends Component {
@@ -106,12 +105,9 @@ export default class SoundList extends Component {
         highlightRow(sectionID, rowID)
         _rowHandleClick(sound)
       }}>
-        <View key={sound.id} style={style.row}>
-          <View style={style.imageContainer}>
-            <Image source={sound.image} style={style.image} />
-          </View>
-          <Text style={style.name}>{sound.name}</Text>
-        </View>
+      <View>
+        <SoundListItem sound={sound} />
+      </View>
       </TouchableHighlight>
     )
   }
@@ -155,42 +151,9 @@ const style = StyleSheet.create({
   scrollView: {
     marginBottom: 100
   },
-  row: {
-    flex: 1,
-    flexDirection: 'row',
-    justifyContent: 'flex-start',
-    alignItems: 'center',
-    padding: 10,
-    borderColor: '#64584F'
-  },
   separator: {
     flex: 1,
     height: StyleSheet.hairlineWidth,
     backgroundColor: '#FFFFFF'
-  },
-  name: {
-    flex: 1,
-    marginLeft: 20,
-    padding: 5,
-    textAlign: 'left',
-    fontFamily: (Platform.OS === 'ios') ? 'GillSans-Light' : 'sans-serif-light',
-    fontSize: 15,
-    letterSpacing: 1.5
-  },
-  image: {
-    height: 50,
-    width: 50,
-    borderRadius: 10
-  },
-  imageContainer: {
-    borderRadius: 10,
-    backgroundColor: '#AAB3BA',
-    shadowColor: '#000000',
-    shadowOpacity: 0.8,
-    shadowRadius: 2,
-    shadowOffset: {
-      height: 2,
-      width: 2
-    }
   }
 })

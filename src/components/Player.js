@@ -1,13 +1,10 @@
 import React, { Component } from 'react'
 import {
-  Text,
   View,
   Image,
   StyleSheet,
   TouchableHighlight } from 'react-native'
 import Icon from 'react-native-vector-icons/FontAwesome'
-
-// import { _pauseSound, _playSound } from './SoundList'
 
 export default class Player extends Component {
   render () {
