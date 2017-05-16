@@ -12,7 +12,7 @@ export default class SoundListItem extends Component {
     return (
       <View key={this.props.sound.id} style={style.row}>
         <View style={style.imageContainer}>
-          <Image source={this.props.sound.image} style={style.image} />
+          <Image style={style.image} source={this.props.sound.image} />
         </View>
         <Text style={style.name}>{this.props.sound.name}</Text>
       </View>

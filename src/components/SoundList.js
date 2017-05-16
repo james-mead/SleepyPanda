@@ -6,6 +6,7 @@ import {
   TouchableHighlight,
   StyleSheet
 } from 'react-native'
+import MusicControl from 'react-native-music-control'
 
 import soundData from '../data/sounds'
 import SoundListItem from './SoundListItem'
@@ -21,26 +22,54 @@ export default class SoundList extends Component {
     const ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2})
     this.state = {
      soundDataSource: ds.cloneWithRows(soundData),
-     status: 'stopped',
+     playing: false,
+     muted: false,
      loadedSound: null,
-     soundIndex: null
+     soundIndex: null,
+     soundName: null,
+     soundImage: null
     }
 
     rowHandleClick = (sound) => {
       if (this.state.soundIndex !== null && this.state.soundIndex !== sound.id) {
-        console.log('media selection has changed')
-        stopSound()
-        loadSound(sound)
-        playSound()
-      } else if (this.state.status === 'stopped' || this.state.status === 'paused') {
-        loadSound(sound)
+        console.log('changing media')
+        unloadSound(function() {
+          stopSound(function() {
+            loadSound(sound, function () {
+              playSound()
+            })
+          })
+        })
+      } else if (!this.state.playing) {
+        loadSound(sound, function() {
+          playSound()
+        })
       } else {
         pauseSound()
       }
     }
 
-    loadSound = (sound) => {
-      console.log('loading', sound.media)
+    unloadSound = (cb) => {
+      console.log('unloading media')
+      this.setState({
+        loadedSound: this.state.loadedSound.stop().release()
+      })
+      cb()
+    }
+
+    stopSound = (cb) => {
+      this.setState({
+        loadedSound: null,
+        playing: false,
+        soundIndex: null,
+        soundName: null,
+        soundImage: null
+      })
+      cb()
+    }
+
+    loadSound = (sound, cb) => {
+      console.log('loading media: ', sound.name)
       const s = new Sound(sound.media, (e) => {
         if (e) {
           console.error('error', e)
@@ -48,23 +77,27 @@ export default class SoundList extends Component {
         }
         this.setState({
           loadedSound: s,
-          status: 'loading',
           soundIndex: sound.id,
+          soundName: sound.name,
           soundImage: sound.image
         })
-        playSound()
+        cb()
       })
     }
 
     playSound = () => {
       const s = this.state.loadedSound
-      console.log('playing', s)
+      console.log('playing: ', this.state.soundName)
         this.setState({
           loadedSound: s.setNumberOfLoops(-1).setVolume(0.1).play(),
-          status: 'playing'
+          playing: true
+        })
+        MusicControl.setNowPlaying({
+          title: this.state.soundName,
+          color: 0xFFFFFF, // Notification Color - Android Only
         })
         // console.log('loaded sound', this.state.loadedSound)
-      _fadeIn()
+      // _fadeIn()
     }
 
     _fadeIn = () => {
@@ -79,25 +112,51 @@ export default class SoundList extends Component {
     }
 
     pauseSound = () => {
+      console.log('pausing: ', this.state.soundName)
       this.setState({
-        status: 'paused',
+        playing: false,
         loadedSound: this.state.loadedSound.pause()
       })
-      // console.log('paused', this.state.status)
+      // console.log('paused', this.state.playing)
     }
 
-    stopSound = () => {
-      this.setState({
-        loadedSound: this.state.loadedSound.stop().release()
+
+  }
+
+  componentDidMount () {
+      console.log('Mounted')
+      MusicControl.enableControl('play', true)
+      MusicControl.enableControl('pause', true)
+      MusicControl.enableBackgroundMode(true)
+      MusicControl.on('play', ()=> {
+        playSound()
       })
-      this.setState({
-        loadedSound: null,
-        status: 'stopped',
-        soundIndex: null,
-        soundImage: null
+      MusicControl.on('pause', ()=> {
+        pauseSound()
       })
     }
-  }
+
+    componentDidUpdate() {
+      // console.log('updated:', this.state)
+      if (this.state.loadedSound) {
+        if (this.state.playing) {
+          MusicControl.updatePlayback({
+            state: MusicControl.STATE_PLAYING, // (STATE_ERROR, STATE_STOPPED, STATE_PLAYING, STATE_PAUSED, STATE_BUFFERING)
+            elapsedTime: 103, // (Seconds)
+          })
+        } else {
+          MusicControl.updatePlayback({
+            state: MusicControl.STATE_PAUSED, // (STATE_ERROR, STATE_STOPPED, STATE_PLAYING, STATE_PAUSED, STATE_BUFFERING)
+            elapsedTime: 103, // (Seconds)
+          })
+        }
+      } else {
+        MusicControl.updatePlayback({
+          state: MusicControl.STATE_STOPPED, // (STATE_ERROR, STATE_STOPPED, STATE_PLAYING, STATE_PAUSED, STATE_BUFFERING)
+          elapsedTime: 103, // (Seconds)
+        })
+      }
+    }
 
   _renderRow (sound, sectionID, rowID, highlightRow) {
     return (
@@ -124,7 +183,7 @@ export default class SoundList extends Component {
   render () {
     return (
       <View style={style.container}>
-        <ScrollView style={this.state.status !== 'stopped'
+        <ScrollView style={this.state.playing
           ? {marginBottom: 100}
           : {marginBottom: 0}
         }>
@@ -134,10 +193,7 @@ export default class SoundList extends Component {
             renderSeparator={this._renderSeperator.bind(this)}
           />
         </ScrollView>
-        {this.state.status !== 'stopped'
-          ? <Player status={this.state.status} image={this.state.soundImage} />
-          : null
-        }
+        {this.state.loadedSound && <Player status={this.state.playing} image={this.state.soundImage} />}
       </View>
     )
   }
