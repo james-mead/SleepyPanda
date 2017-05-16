@@ -65,6 +65,7 @@ export default class SoundList extends Component {
         soundName: null,
         soundImage: null
       })
+      MusicControl.resetNowPlaying()
       cb()
     }
 
@@ -121,6 +122,7 @@ export default class SoundList extends Component {
 
   componentDidMount () {
       console.log('Mounted')
+      console.log(RNFetchBlob.fs.dirs.DocumentDir)
       MusicControl.enableControl('play', true)
       MusicControl.enableControl('pause', true)
       MusicControl.enableBackgroundMode(true)

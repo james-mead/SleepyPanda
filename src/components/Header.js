@@ -9,7 +9,7 @@ export default class Header extends Component {
   render () {
     return (
       <View style={style.header}>
-        <Image source={require('../images/Panda.png')} style={style.appLogo} />
+        <Image source={require('../images/Logo.png')} style={style.appLogo} />
         <Text style={style.appTitle}>
           Sleepy Panda
         </Text>
@@ -36,6 +36,7 @@ const style = StyleSheet.create({
   },
   appLogo: {
     height: 70,
+    width: 100,
     backgroundColor: 'transparent'
   }
 })
