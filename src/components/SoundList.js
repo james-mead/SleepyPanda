@@ -33,15 +33,15 @@ export default class SoundList extends Component {
     rowHandleClick = (sound) => {
       if (this.state.soundIndex !== null && this.state.soundIndex !== sound.id) {
         console.log('changing media')
-        unloadSound(function() {
-          stopSound(function() {
+        unloadSound(function () {
+          stopSound(function () {
             loadSound(sound, function () {
               playSound()
             })
           })
         })
       } else if (!this.state.playing) {
-        loadSound(sound, function() {
+        loadSound(sound, function () {
           playSound()
         })
       } else {
@@ -86,8 +86,8 @@ export default class SoundList extends Component {
     }
 
     playSound = () => {
-      const s = this.state.loadedSound
       console.log('playing: ', this.state.soundName)
+      const s = this.state.loadedSound
         this.setState({
           loadedSound: s.setNumberOfLoops(-1).setVolume(0.1).play(),
           playing: true
@@ -96,8 +96,7 @@ export default class SoundList extends Component {
           title: this.state.soundName,
           color: 0xFFFFFF, // Notification Color - Android Only
         })
-        // console.log('loaded sound', this.state.loadedSound)
-      // _fadeIn()
+      _fadeIn()
     }
 
     _fadeIn = () => {
@@ -117,10 +116,7 @@ export default class SoundList extends Component {
         playing: false,
         loadedSound: this.state.loadedSound.pause()
       })
-      // console.log('paused', this.state.playing)
     }
-
-
   }
 
   componentDidMount () {
@@ -137,26 +133,21 @@ export default class SoundList extends Component {
     }
 
     componentDidUpdate() {
-      // console.log('updated:', this.state)
+      let status = null
       if (this.state.loadedSound) {
         if (this.state.playing) {
-          MusicControl.updatePlayback({
-            state: MusicControl.STATE_PLAYING, // (STATE_ERROR, STATE_STOPPED, STATE_PLAYING, STATE_PAUSED, STATE_BUFFERING)
-            elapsedTime: 103, // (Seconds)
-          })
+          status = MusicControl.STATE_PLAYING
         } else {
-          MusicControl.updatePlayback({
-            state: MusicControl.STATE_PAUSED, // (STATE_ERROR, STATE_STOPPED, STATE_PLAYING, STATE_PAUSED, STATE_BUFFERING)
-            elapsedTime: 103, // (Seconds)
-          })
+          status = MusicControl.STATE_PAUSED
         }
       } else {
-        MusicControl.updatePlayback({
-          state: MusicControl.STATE_STOPPED, // (STATE_ERROR, STATE_STOPPED, STATE_PLAYING, STATE_PAUSED, STATE_BUFFERING)
-          elapsedTime: 103, // (Seconds)
-        })
+        status = MusicControl.STATE_STOPPED
       }
-    }
+      MusicControl.updatePlayback({
+        state: status, // (STATE_ERROR, STATE_STOPPED, STATE_PLAYING, STATE_PAUSED, STATE_BUFFERING)
+        elapsedTime: 103, // (Seconds)
+    })
+  }
 
   _renderRow (sound, sectionID, rowID, highlightRow) {
     return (
