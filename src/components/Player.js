@@ -11,7 +11,7 @@ export default class Player extends Component {
     return (
       <View style={style.container}>
         <View style={style.imageContainer}>
-          <Image source={this.props.imageThumbnail} style={style.image} />
+          <Image source={this.props.image} style={style.image} />
         </View>
         {this.props.status
         ? <TouchableHighlight underlayColor="white" onPress={() => { pauseSound() }}>

@@ -7,6 +7,7 @@ import {
   StyleSheet
 } from 'react-native'
 import MusicControl from 'react-native-music-control'
+import resolveAssetSource from 'react-native/Libraries/Image/resolveAssetSource'
 
 import soundData from '../data/sounds'
 import SoundListItem from './SoundListItem'
@@ -98,6 +99,7 @@ export default class SoundList extends Component {
         })
         MusicControl.setNowPlaying({
           title: this.state.soundName,
+          artwork: resolveAssetSource(this.state.soundImage).uri,
           color: 0xFFFFFF, // Notification Color - Android Only
         })
       _fadeIn()
@@ -138,20 +140,18 @@ export default class SoundList extends Component {
 
     componentDidUpdate() {
       let status = null
-      // if (this.state.loadedSound) {
-      //   if (this.state.playing) {
-      //     status = MusicControl.STATE_PLAYING
-      //   } else {
-      //     status = MusicControl.STATE_PAUSED
-      //   }
-      // } else {
-      //   status = MusicControl.STATE_STOPPED
-      // }
-      // MusicControl.updatePlayback({
-      //   state: status, // (STATE_ERROR, STATE_STOPPED, STATE_PLAYING, STATE_PAUSED, STATE_BUFFERING)
-      //   elapsedTime: 103, // (Seconds)
-      // })
-  }
+      if (this.state.loadedSound) {
+        if (this.state.playing) {
+          status = MusicControl.STATE_PLAYING
+        } else {
+          status = MusicControl.STATE_PAUSED
+        }
+        MusicControl.updatePlayback({
+          state: status, // (STATE_ERROR, STATE_STOPPED, STATE_PLAYING, STATE_PAUSED, STATE_BUFFERING)
+          elapsedTime: 103, // (Seconds)
+        })
+      }
+    }
 
   _renderRow (sound, sectionID, rowID, highlightRow) {
     return (
@@ -188,7 +188,7 @@ export default class SoundList extends Component {
             renderSeparator={this._renderSeperator.bind(this)}
           />
         </ScrollView>
-        {this.state.loadedSound && <Player status={this.state.playing} image={this.state.soundImage} />}
+        {this.state.loadedSound && <Player status={this.state.playing} image={this.state.soundImageThumbnail} />}
       </View>
     )
   }
