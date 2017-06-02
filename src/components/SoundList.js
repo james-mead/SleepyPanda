@@ -27,6 +27,7 @@ export default class SoundList extends Component {
      loadedSound: null,
      soundIndex: null,
      soundName: null,
+     soundImageThumbnail: null,
      soundImage: null
     }
 
@@ -63,6 +64,7 @@ export default class SoundList extends Component {
         playing: false,
         soundIndex: null,
         soundName: null,
+        soundImageThumbnail: null,
         soundImage: null
       })
       MusicControl.resetNowPlaying()
@@ -80,7 +82,8 @@ export default class SoundList extends Component {
           loadedSound: s,
           soundIndex: sound.id,
           soundName: sound.name,
-          soundImage: sound.image
+          soundImage: sound.image,
+          soundImageThumbnail: sound.imageThumbnail
         })
         cb()
       })
@@ -122,7 +125,6 @@ export default class SoundList extends Component {
 
   componentDidMount () {
       console.log('Mounted')
-      console.log(RNFetchBlob.fs.dirs.DocumentDir)
       MusicControl.enableControl('play', true)
       MusicControl.enableControl('pause', true)
       MusicControl.enableBackgroundMode(true)
@@ -136,19 +138,19 @@ export default class SoundList extends Component {
 
     componentDidUpdate() {
       let status = null
-      if (this.state.loadedSound) {
-        if (this.state.playing) {
-          status = MusicControl.STATE_PLAYING
-        } else {
-          status = MusicControl.STATE_PAUSED
-        }
-      } else {
-        status = MusicControl.STATE_STOPPED
-      }
-      MusicControl.updatePlayback({
-        state: status, // (STATE_ERROR, STATE_STOPPED, STATE_PLAYING, STATE_PAUSED, STATE_BUFFERING)
-        elapsedTime: 103, // (Seconds)
-    })
+      // if (this.state.loadedSound) {
+      //   if (this.state.playing) {
+      //     status = MusicControl.STATE_PLAYING
+      //   } else {
+      //     status = MusicControl.STATE_PAUSED
+      //   }
+      // } else {
+      //   status = MusicControl.STATE_STOPPED
+      // }
+      // MusicControl.updatePlayback({
+      //   state: status, // (STATE_ERROR, STATE_STOPPED, STATE_PLAYING, STATE_PAUSED, STATE_BUFFERING)
+      //   elapsedTime: 103, // (Seconds)
+      // })
   }
 
   _renderRow (sound, sectionID, rowID, highlightRow) {
