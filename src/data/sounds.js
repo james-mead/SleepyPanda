@@ -31,6 +31,20 @@ export default sounds = [
   },
   {
     id: id++,
+    name: 'River Stream',
+    image: require('../images/sound-images/RiverStream.png'),
+    imageThumbnail: require('../images/sound-images/RiverStream-small.png'),
+    media: require('../sounds/RiverStream.mp3')
+  },
+  {
+    id: id++,
+    name: 'Waterfall',
+    image: require('../images/sound-images/Waterfall.png'),
+    imageThumbnail: require('../images/sound-images/Waterfall-small.png'),
+    media: require('../sounds/Waterfall.mp3')
+  },
+  {
+    id: id++,
     name: 'Native Birds',
     image: require('../images/sound-images/NativeBirds.png'),
     imageThumbnail: require('../images/sound-images/NativeBirds-small.png'),
@@ -49,5 +63,12 @@ export default sounds = [
     image: require('../images/sound-images/OceanWavesOnShore.png'),
     imageThumbnail: require('../images/sound-images/OceanWavesOnShore-small.png'),
     media: require('../sounds/OceanWavesOnShore.mp3')
+  },
+  {
+    id: id++,
+    name: 'Womb',
+    image: require('../images/sound-images/Womb.png'),
+    imageThumbnail: require('../images/sound-images/Womb-small.png'),
+    media: require('../sounds/Womb.mp3')
   }
 ]

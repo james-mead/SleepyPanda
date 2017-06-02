@@ -32,27 +32,29 @@ export default class SoundList extends Component {
     }
 
     rowHandleClick = (sound) => {
-      if (!this.state.soundIndex) {
+      if (!this.state.loadedSound) {
         // no media loaded
         loadSound(sound, function () {
           playSound()
         })
-      } else if (this.state.soundIndex !== sound.id) {
-        // changing media
-        console.log('changing media')
-        unloadSound(function () {
-          stopSound(function () {
-            loadSound(sound, function () {
-              playSound()
+      } else {
+        if (this.state.soundIndex !== sound.id) {
+          // changing media
+          console.log('changing media')
+          unloadSound(function () {
+            stopSound(function () {
+              loadSound(sound, function () {
+                playSound()
+              })
             })
           })
-        })
-      } else if (this.state.playing) {
-        // pause sound
-        pauseSound()
-      } else {
-        // play sound
-        playSound()
+        } else if (this.state.playing) {
+          // pause sound
+          pauseSound()
+        } else {
+          // play sound
+          playSound()
+        }
       }
     }
 
@@ -176,7 +178,7 @@ export default class SoundList extends Component {
   render () {
     return (
       <View style={style.container}>
-        <ScrollView style={this.state.playing
+        <ScrollView style={this.state.loadedSound
           ? {marginBottom: 100}
           : {marginBottom: 0}
         }>
