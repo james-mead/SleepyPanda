@@ -14,7 +14,6 @@ import SoundListItem from './SoundListItem'
 import Player from './Player'
 
 const Sound = require('react-native-sound')
-
 Sound.setCategory('Playback', false) // enable background Sound but don't mix audio sessions
 
 export default class SoundList extends Component {
@@ -33,7 +32,13 @@ export default class SoundList extends Component {
     }
 
     rowHandleClick = (sound) => {
-      if (this.state.soundIndex !== null && this.state.soundIndex !== sound.id) {
+      if (!this.state.soundIndex) {
+        // no media loaded
+        loadSound(sound, function () {
+          playSound()
+        })
+      } else if (this.state.soundIndex !== sound.id) {
+        // changing media
         console.log('changing media')
         unloadSound(function () {
           stopSound(function () {
@@ -42,12 +47,12 @@ export default class SoundList extends Component {
             })
           })
         })
-      } else if (!this.state.playing) {
-        loadSound(sound, function () {
-          playSound()
-        })
-      } else {
+      } else if (this.state.playing) {
+        // pause sound
         pauseSound()
+      } else {
+        // play sound
+        playSound()
       }
     }
 
@@ -102,6 +107,10 @@ export default class SoundList extends Component {
           artwork: resolveAssetSource(this.state.soundImage).uri,
           color: 0xFFFFFF, // Notification Color - Android Only
         })
+        MusicControl.updatePlayback({
+          state: MusicControl.STATE_PLAYING, // (STATE_ERROR, STATE_STOPPED, STATE_PLAYING, STATE_PAUSED, STATE_BUFFERING)
+          elapsedTime: 103, // (Seconds)
+        })
       _fadeIn()
     }
 
@@ -122,6 +131,10 @@ export default class SoundList extends Component {
         playing: false,
         loadedSound: this.state.loadedSound.pause()
       })
+      MusicControl.updatePlayback({
+        state: MusicControl.STATE_PAUSED, // (STATE_ERROR, STATE_STOPPED, STATE_PLAYING, STATE_PAUSED, STATE_BUFFERING)
+        elapsedTime: 103, // (Seconds)
+      })
     }
   }
 
@@ -136,21 +149,6 @@ export default class SoundList extends Component {
       MusicControl.on('pause', ()=> {
         pauseSound()
       })
-    }
-
-    componentDidUpdate() {
-      let status = null
-      if (this.state.loadedSound) {
-        if (this.state.playing) {
-          status = MusicControl.STATE_PLAYING
-        } else {
-          status = MusicControl.STATE_PAUSED
-        }
-        MusicControl.updatePlayback({
-          state: status, // (STATE_ERROR, STATE_STOPPED, STATE_PLAYING, STATE_PAUSED, STATE_BUFFERING)
-          elapsedTime: 103, // (Seconds)
-        })
-      }
     }
 
   _renderRow (sound, sectionID, rowID, highlightRow) {
