@@ -75,13 +75,17 @@ export default class SoundList extends Component {
         soundImageThumbnail: null,
         soundImage: null
       })
+      MusicControl.updatePlayback({
+        state: MusicControl.STATE_STOPPED, // (STATE_ERROR, STATE_STOPPED, STATE_PLAYING, STATE_PAUSED, STATE_BUFFERING)
+        elapsedTime: 103, // (Seconds)
+      })
       MusicControl.resetNowPlaying()
       cb()
     }
 
     loadSound = (sound, cb) => {
       console.log('loading media: ', sound.name)
-      const s = new Sound(sound.media, (e) => {
+      const s = new Sound(sound.soundLabel, Sound.MAIN_BUNDLE, (e) => {
         if (e) {
           console.error('error', e)
           return
@@ -106,7 +110,7 @@ export default class SoundList extends Component {
         })
         MusicControl.setNowPlaying({
           title: this.state.soundName,
-          artwork: resolveAssetSource(this.state.soundImage).uri,
+          // artwork: resolveAssetSource(this.state.soundImage).uri,
           color: 0xFFFFFF, // Notification Color - Android Only
         })
         MusicControl.updatePlayback({
