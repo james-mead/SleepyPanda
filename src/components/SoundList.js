@@ -7,7 +7,7 @@ import {
   StyleSheet
 } from 'react-native'
 import MusicControl from 'react-native-music-control'
-import resolveAssetSource from 'react-native/Libraries/Image/resolveAssetSource'
+// import resolveAssetSource from 'react-native/Libraries/Image/resolveAssetSource'
 
 import soundData from '../data/sounds'
 import SoundListItem from './SoundListItem'
@@ -23,7 +23,6 @@ export default class SoundList extends Component {
     this.state = {
      soundDataSource: ds.cloneWithRows(soundData),
      playing: false,
-     muted: false,
      loadedSound: null,
      soundIndex: null,
      soundName: null,
@@ -76,7 +75,7 @@ export default class SoundList extends Component {
         soundImage: null
       })
       MusicControl.updatePlayback({
-        state: MusicControl.STATE_STOPPED, // (STATE_ERROR, STATE_STOPPED, STATE_PLAYING, STATE_PAUSED, STATE_BUFFERING)
+        state: MusicControl.STATE_STOPPED,
         elapsedTime: 103, // (Seconds)
       })
       MusicControl.resetNowPlaying()
@@ -114,7 +113,7 @@ export default class SoundList extends Component {
           color: 0xFFFFFF, // Notification Color - Android Only
         })
         MusicControl.updatePlayback({
-          state: MusicControl.STATE_PLAYING, // (STATE_ERROR, STATE_STOPPED, STATE_PLAYING, STATE_PAUSED, STATE_BUFFERING)
+          state: MusicControl.STATE_PLAYING,
           elapsedTime: 103, // (Seconds)
         })
       _fadeIn()

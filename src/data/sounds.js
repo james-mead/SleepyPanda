@@ -4,81 +4,81 @@ export default sounds = [
   {
     id: id++,
     name: 'Gentle Rain',
-    image: require('../images/sound-images/GentleRain.png'),
-    imageThumbnail: require('../images/sound-images/GentleRain-small.png'),
-    soundLabel: 'GentleRain.mp3',
-    soundRequire: require('../sounds/GentleRain.mp3')
+    image: require('../images/sound-images/gentle_rain.png'),
+    imageThumbnail: require('../images/sound-images/gentle_rain_small.png'),
+    soundLabel: 'gentle_rain.mp3',
+    soundRequire: require('../sounds/gentle_rain.mp3')
   },
   {
     id: id++,
     name: 'Heavy Rain',
-    image: require('../images/sound-images/HeavyRain.png'),
-    imageThumbnail: require('../images/sound-images/HeavyRain-small.png'),
-    soundLabel: 'HeavyRain.mp3',
-    soundRequire: require('../sounds/HeavyRain.mp3')
+    image: require('../images/sound-images/heavy_rain.png'),
+    imageThumbnail: require('../images/sound-images/heavy_rain_small.png'),
+    soundLabel: 'heavy_rain.mp3',
+    soundRequire: require('../sounds/heavy_rain.mp3')
   },
   {
     id: id++,
     name: 'Distant Thunder',
-    image: require('../images/sound-images/DistantThunder.png'),
-    imageThumbnail: require('../images/sound-images/DistantThunder-small.png'),
-    soundLabel: 'DistantThunder.mp3',
-    soundRequire: require('../sounds/DistantThunder.mp3')
+    image: require('../images/sound-images/distant_thunder.png'),
+    imageThumbnail: require('../images/sound-images/distant_thunder_small.png'),
+    soundLabel: 'distant_thunder.mp3',
+    soundRequire: require('../sounds/distant_thunder.mp3')
   },
   {
     id: id++,
     name: 'Rain on Tent',
-    image: require('../images/sound-images/RainOnTent.png'),
-    imageThumbnail: require('../images/sound-images/RainOnTent-small.png'),
-    soundLabel: 'RainOnTent.mp3',
-    soundRequire: require('../sounds/RainOnTent.mp3')
+    image: require('../images/sound-images/rain_on_tent.png'),
+    imageThumbnail: require('../images/sound-images/rain_on_tent_small.png'),
+    soundLabel: 'rain_on_tent.mp3',
+    soundRequire: require('../sounds/rain_on_tent.mp3')
   },
   {
     id: id++,
     name: 'River Stream',
-    image: require('../images/sound-images/RiverStream.png'),
-    imageThumbnail: require('../images/sound-images/RiverStream-small.png'),
-    soundLabel: 'RiverStream.mp3',
-    soundRequire: require('../sounds/RiverStream.mp3')
+    image: require('../images/sound-images/river_stream.png'),
+    imageThumbnail: require('../images/sound-images/river_stream_small.png'),
+    soundLabel: 'river_stream.mp3',
+    soundRequire: require('../sounds/river_stream.mp3')
   },
   {
     id: id++,
     name: 'Waterfall',
-    image: require('../images/sound-images/Waterfall.png'),
-    imageThumbnail: require('../images/sound-images/Waterfall-small.png'),
-    soundLabel: 'Waterfall.mp3',
-    soundRequire: require('../sounds/Waterfall.mp3')
+    image: require('../images/sound-images/waterfall.png'),
+    imageThumbnail: require('../images/sound-images/waterfall_small.png'),
+    soundLabel: 'waterfall.mp3',
+    soundRequire: require('../sounds/waterfall.mp3')
   },
   {
     id: id++,
     name: 'Native Birds',
-    image: require('../images/sound-images/NativeBirds.png'),
-    imageThumbnail: require('../images/sound-images/NativeBirds-small.png'),
-    soundLabel: 'NativeBirds.mp3',
-    soundRequire: require('../sounds/NativeBirds.mp3')
+    image: require('../images/sound-images/native_birds.png'),
+    imageThumbnail: require('../images/sound-images/native_birds_small.png'),
+    soundLabel: 'native_birds.mp3',
+    soundRequire: require('../sounds/native_birds.mp3')
   },
   {
     id: id++,
     name: 'Ocean Waves on Rocks',
-    image: require('../images/sound-images/OceanWavesOnRocks.png'),
-    imageThumbnail: require('../images/sound-images/OceanWavesOnRocks-small.png'),
-    soundLabel: 'OceanWavesOnRocks.mp3',
-    soundRequire: require('../sounds/OceanWavesOnRocks.mp3')
+    image: require('../images/sound-images/ocean_waves_on_rocks.png'),
+    imageThumbnail: require('../images/sound-images/ocean_waves_on_rocks_small.png'),
+    soundLabel: 'ocean_waves_on_rocks.mp3',
+    soundRequire: require('../sounds/ocean_waves_on_rocks.mp3')
   },
   {
     id: id++,
     name: 'Ocean Waves on Shore',
-    image: require('../images/sound-images/OceanWavesOnShore.png'),
-    imageThumbnail: require('../images/sound-images/OceanWavesOnShore-small.png'),
-    soundLabel: 'OceanWavesOnShore.mp3',
-    soundRequire: require('../sounds/OceanWavesOnShore.mp3')
+    image: require('../images/sound-images/ocean_waves_on_shore.png'),
+    imageThumbnail: require('../images/sound-images/ocean_waves_on_shore_small.png'),
+    soundLabel: 'ocean_waves_on_shore.mp3',
+    soundRequire: require('../sounds/ocean_waves_on_shore.mp3')
   },
   {
     id: id++,
     name: 'Womb',
-    image: require('../images/sound-images/Womb.png'),
-    imageThumbnail: require('../images/sound-images/Womb-small.png'),
-    soundLabel: 'Womb.mp3',
-    soundRequire: require('../sounds/Womb.mp3')
+    image: require('../images/sound-images/womb.png'),
+    imageThumbnail: require('../images/sound-images/womb_small.png'),
+    soundLabel: 'womb.mp3',
+    soundRequire: require('../sounds/womb.mp3')
   }
 ]
