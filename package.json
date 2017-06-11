@@ -16,7 +16,11 @@
   "devDependencies": {
     "babel-jest": "19.0.0",
     "babel-preset-react-native": "1.9.1",
+    "enzyme": "^2.8.2",
     "jest": "19.0.2",
+    "react-addons-test-utils": "^15.5.1",
+    "react-dom": "^15.5.4",
+    "react-shallow-testutils": "^3.0.0",
     "react-test-renderer": "~15.4.1"
   },
   "jest": {
