@@ -1,5 +1,25 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Confirms Sound Data is loaded renders the name of each sound file 1`] = `
+<RCTScrollView
+  dataSource={
+    ListViewDataSource {
+      "items": 0,
+    }
+  }
+  renderRow={[Function]}
+  renderScrollComponent={[Function]}
+>
+  <View>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+    />
+  </View>
+</RCTScrollView>
+`;
+
 exports[`Header (Snapshot) Renders the Header Component 1`] = `
 <View
   style={
