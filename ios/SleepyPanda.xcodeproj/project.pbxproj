@@ -56,6 +56,7 @@
 		57A135CB776546B5989C92B3 /* libRNVectorIcons.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D00D6465EDB54EA4A0F8556C /* libRNVectorIcons.a */; };
 		5E9157361DD0AC6A00FF2AA8 /* libRCTAnimation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E9157331DD0AC6500FF2AA8 /* libRCTAnimation.a */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
+		BB6936FF475C41919BA5231F /* libReactNativeVolumeController.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 64C9DF184CB3447F919005F3 /* libReactNativeVolumeController.a */; };
 		C5DA4286738A46DA911AAF52 /* libMusicControl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9681689AF43C43D7B3EA5999 /* libMusicControl.a */; };
 		FDD0622368194E6CB30B28F4 /* libRNSound.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 11A23FD0606448CB80AB85C9 /* libRNSound.a */; };
 /* End PBXBuildFile section */
@@ -74,6 +75,13 @@
 			proxyType = 2;
 			remoteGlobalIDString = 19825A1E1BD4A89800EE0337;
 			remoteInfo = RNSound;
+		};
+		005CD9931EEF862A005DFA7D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 431B88C6643140FB96574B1A /* ReactNativeVolumeController.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A1DF0B771E90288A00B9A176;
+			remoteInfo = ReactNativeVolumeController;
 		};
 		00C302AB1ABCB8CE00DB3ED1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -320,8 +328,10 @@
 		2D02E4901E0B4A5D006451C7 /* SleepyPanda-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SleepyPanda-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		31C20E7EFCC74F9FB43F311E /* FontAwesome.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome.ttf"; sourceTree = "<group>"; };
 		4251D9E9BEA74F029A9B8C78 /* RNSound.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNSound.xcodeproj; path = "../node_modules/react-native-sound/RNSound.xcodeproj"; sourceTree = "<group>"; };
+		431B88C6643140FB96574B1A /* ReactNativeVolumeController.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = ReactNativeVolumeController.xcodeproj; path = "../node_modules/react-native-volume-controller/ios/ReactNativeVolumeController.xcodeproj"; sourceTree = "<group>"; };
 		50E2A0EC27694E46B1B99324 /* Entypo.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Entypo.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Entypo.ttf"; sourceTree = "<group>"; };
 		5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTAnimation.xcodeproj; path = "../node_modules/react-native/Libraries/NativeAnimation/RCTAnimation.xcodeproj"; sourceTree = "<group>"; };
+		64C9DF184CB3447F919005F3 /* libReactNativeVolumeController.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libReactNativeVolumeController.a; sourceTree = "<group>"; };
 		6D02C7CFF1804EF4B5B86956 /* Octicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Octicons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Octicons.ttf"; sourceTree = "<group>"; };
 		7493BD5211FB4AEC94CB614C /* EvilIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = EvilIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/EvilIcons.ttf"; sourceTree = "<group>"; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
@@ -362,6 +372,7 @@
 				FDD0622368194E6CB30B28F4 /* libRNSound.a in Frameworks */,
 				57A135CB776546B5989C92B3 /* libRNVectorIcons.a in Frameworks */,
 				C5DA4286738A46DA911AAF52 /* libMusicControl.a in Frameworks */,
+				BB6936FF475C41919BA5231F /* libReactNativeVolumeController.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -420,6 +431,14 @@
 			isa = PBXGroup;
 			children = (
 				005A46341E87CE5800EAC5DA /* libRNSound.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		005CD9761EEF862A005DFA7D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				005CD9941EEF862A005DFA7D /* libReactNativeVolumeController.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -572,6 +591,7 @@
 				4251D9E9BEA74F029A9B8C78 /* RNSound.xcodeproj */,
 				7FB4100F86C6453DA6F841B7 /* RNVectorIcons.xcodeproj */,
 				E1C93B67B095455DAB705C10 /* MusicControl.xcodeproj */,
+				431B88C6643140FB96574B1A /* ReactNativeVolumeController.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -806,6 +826,10 @@
 					ProjectRef = 146833FF1AC3E56700842450 /* React.xcodeproj */;
 				},
 				{
+					ProductGroup = 005CD9761EEF862A005DFA7D /* Products */;
+					ProjectRef = 431B88C6643140FB96574B1A /* ReactNativeVolumeController.xcodeproj */;
+				},
+				{
 					ProductGroup = 005A46171E87CE5800EAC5DA /* Products */;
 					ProjectRef = 4251D9E9BEA74F029A9B8C78 /* RNSound.xcodeproj */;
 				},
@@ -837,6 +861,13 @@
 			fileType = archive.ar;
 			path = libRNSound.a;
 			remoteRef = 005A46331E87CE5800EAC5DA /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		005CD9941EEF862A005DFA7D /* libReactNativeVolumeController.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libReactNativeVolumeController.a;
+			remoteRef = 005CD9931EEF862A005DFA7D /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		00C302AC1ABCB8CE00DB3ED1 /* libRCTActionSheet.a */ = {
@@ -1171,12 +1202,14 @@
 					"$(SRCROOT)/../node_modules/react-native-sound/RNSound",
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
 					"$(SRCROOT)/../node_modules/react-native-music-control/ios",
+					"$(SRCROOT)/../node_modules/react-native-volume-controller/ios/ReactNativeVolumeController",
 				);
 				INFOPLIST_FILE = SleepyPandaTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
@@ -1201,12 +1234,14 @@
 					"$(SRCROOT)/../node_modules/react-native-sound/RNSound",
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
 					"$(SRCROOT)/../node_modules/react-native-music-control/ios",
+					"$(SRCROOT)/../node_modules/react-native-volume-controller/ios/ReactNativeVolumeController",
 				);
 				INFOPLIST_FILE = SleepyPandaTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
@@ -1236,6 +1271,7 @@
 					"$(SRCROOT)/../node_modules/react-native-sound/RNSound",
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
 					"$(SRCROOT)/../node_modules/react-native-music-control/ios",
+					"$(SRCROOT)/../node_modules/react-native-volume-controller/ios/ReactNativeVolumeController",
 				);
 				INFOPLIST_FILE = SleepyPanda/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
@@ -1265,6 +1301,7 @@
 					"$(SRCROOT)/../node_modules/react-native-sound/RNSound",
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
 					"$(SRCROOT)/../node_modules/react-native-music-control/ios",
+					"$(SRCROOT)/../node_modules/react-native-volume-controller/ios/ReactNativeVolumeController",
 				);
 				INFOPLIST_FILE = SleepyPanda/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
@@ -1297,11 +1334,13 @@
 					"$(SRCROOT)/../node_modules/react-native-sound/RNSound",
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
 					"$(SRCROOT)/../node_modules/react-native-music-control/ios",
+					"$(SRCROOT)/../node_modules/react-native-volume-controller/ios/ReactNativeVolumeController",
 				);
 				INFOPLIST_FILE = "SleepyPanda-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
@@ -1335,11 +1374,13 @@
 					"$(SRCROOT)/../node_modules/react-native-sound/RNSound",
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
 					"$(SRCROOT)/../node_modules/react-native-music-control/ios",
+					"$(SRCROOT)/../node_modules/react-native-volume-controller/ios/ReactNativeVolumeController",
 				);
 				INFOPLIST_FILE = "SleepyPanda-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
@@ -1374,6 +1415,7 @@
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.SleepyPanda-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1398,6 +1440,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",

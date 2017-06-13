@@ -11,7 +11,8 @@
     "react-native": "0.42.3",
     "react-native-music-control": "^0.4.1",
     "react-native-sound": "^0.9.1",
-    "react-native-vector-icons": "^4.1.1"
+    "react-native-vector-icons": "^4.1.1",
+    "react-native-volume-controller": "^1.1.5"
   },
   "devDependencies": {
     "babel-jest": "19.0.0",
