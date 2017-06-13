@@ -35,8 +35,8 @@ const style = StyleSheet.create({
     textAlign: 'left'
   },
   appLogo: {
-    height: 70,
-    width: 100,
+    height: 40,
+    width: 60,
     backgroundColor: 'transparent'
   }
 })

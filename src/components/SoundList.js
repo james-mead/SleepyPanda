@@ -7,7 +7,6 @@ import {
   StyleSheet
 } from 'react-native'
 import MusicControl from 'react-native-music-control'
-
 // import resolveAssetSource from 'react-native/Libraries/Image/resolveAssetSource'
 
 import soundData from '../data/sounds'
@@ -18,19 +17,18 @@ const Sound = require('react-native-sound')
 Sound.setCategory('Playback', false) // enable background Sound but don't mix audio sessions
 
 export default class SoundList extends Component {
-  constructor () {
+  constructor() {
     super()
     const ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2})
     this.state = {
      soundDataSource: ds.cloneWithRows(soundData),
      playing: false,
-     loadedSound: null,
-     soundIndex: null,
-     soundName: null,
-     soundImageThumbnail: null,
-     soundImage: null
+     loadedSound: new Sound(soundData[0].soundLabel, Sound.MAIN_BUNDLE),
+     soundIndex: soundData[0].id,
+     soundName: soundData[0].name,
+     soundImageThumbnail: soundData[0].imageThumbnail,
+     soundImage: soundData[0].image
     }
-
 
     rowHandleClick = (sound) => {
       if (!this.state.loadedSound) {
@@ -111,13 +109,12 @@ export default class SoundList extends Component {
         })
         MusicControl.setNowPlaying({
           title: this.state.soundName,
-          // artwork: resolveAssetSource(this.state.soundImage).uri,
           color: 0xFFFFFF, // Notification Color - Android Only
         })
-        MusicControl.updatePlayback({
-          state: MusicControl.STATE_PLAYING,
-          elapsedTime: 103, // (Seconds)
-        })
+        // MusicControl.updatePlayback({
+        //   state: MusicControl.STATE_PLAYING,
+        //   elapsedTime: 103, // (Seconds)
+        // })
       _fadeIn()
     }
 
@@ -147,9 +144,9 @@ export default class SoundList extends Component {
 
   componentDidMount () {
       console.log('Mounted')
+      MusicControl.enableBackgroundMode(true)
       MusicControl.enableControl('play', true)
       MusicControl.enableControl('pause', true)
-      MusicControl.enableBackgroundMode(true)
       MusicControl.on('play', ()=> {
         playSound()
       })
@@ -183,14 +180,21 @@ export default class SoundList extends Component {
   render () {
     return (
       <View style={style.container}>
-        <ScrollView style={style.scrollView}>
+        <ScrollView style={this.state.loadedSound
+          ? {marginBottom: 100}
+          : {marginBottom: 0}
+        }>
           <ListView
             dataSource={this.state.soundDataSource}
             renderRow={this._renderRow.bind(this)}
             renderSeparator={this._renderSeperator.bind(this)}
           />
         </ScrollView>
-        <Player status={this.state.playing} image={this.state.soundImageThumbnail} />
+        <Player status={this.state.playing}
+          play={() => playSound()}
+          pause={() => pauseSound()}
+          image={this.state.soundImageThumbnail}
+        />
       </View>
     )
   }
@@ -201,12 +205,12 @@ const style = StyleSheet.create({
     flex: 1,
     backgroundColor: '#AAB3BA'
   },
+  scrollView: {
+    marginBottom: 100
+  },
   separator: {
     flex: 1,
     height: StyleSheet.hairlineWidth,
     backgroundColor: '#FFFFFF'
-  },
-  scrollView: {
-    marginBottom: 100
   }
 })
