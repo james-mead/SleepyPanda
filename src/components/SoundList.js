@@ -4,7 +4,10 @@ import {
   ListView,
   ScrollView,
   TouchableHighlight,
-  StyleSheet
+  StyleSheet,
+  NativeModules,
+  NativeEventEmitter,
+  DeviceEventEmitter
 } from 'react-native'
 import MusicControl from 'react-native-music-control'
 // import resolveAssetSource from 'react-native/Libraries/Image/resolveAssetSource'
@@ -111,10 +114,6 @@ export default class SoundList extends Component {
           title: this.state.soundName,
           color: 0xFFFFFF, // Notification Color - Android Only
         })
-        // MusicControl.updatePlayback({
-        //   state: MusicControl.STATE_PLAYING,
-        //   elapsedTime: 103, // (Seconds)
-        // })
       _fadeIn()
     }
 
@@ -144,6 +143,14 @@ export default class SoundList extends Component {
 
   componentDidMount () {
       console.log('Mounted')
+      this.subscription = DeviceEventEmitter.addListener('audioEvent', (evt) => {
+        console.log('audio interruption event:', evt.status)
+        if (evt.status === 'started' ) {
+          pauseSound()
+        } else if (evt.status === 'ended') {
+          playSound()
+        }
+      })
       MusicControl.enableBackgroundMode(true)
       MusicControl.enableControl('play', true)
       MusicControl.enableControl('pause', true)
@@ -154,6 +161,11 @@ export default class SoundList extends Component {
         pauseSound()
       })
     }
+
+  componentDidUnmount() {
+    this.subscription.remove();
+    console.log('Unmounted')
+  }
 
   _renderRow (sound, sectionID, rowID, highlightRow) {
     return (
