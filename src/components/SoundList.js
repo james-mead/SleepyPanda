@@ -145,12 +145,17 @@ export default class SoundList extends Component {
       console.log('Mounted')
       this.subscription = DeviceEventEmitter.addListener('audioEvent', (evt) => {
         console.log('audio interruption event:', evt.status)
-        if (evt.status === 'started' ) {
-          pauseSound()
+        if (evt.status === 'started') {
+          this.setState({
+          loadedSound: this.state.loadedSound.stop()
+          })
         } else if (evt.status === 'ended') {
           playSound()
         }
       })
+      // this.eventEmitter.addListener('audioEvent',(data) => {
+      //   console.log(data);
+      // })
       MusicControl.enableBackgroundMode(true)
       MusicControl.enableControl('play', true)
       MusicControl.enableControl('pause', true)
@@ -162,7 +167,7 @@ export default class SoundList extends Component {
       })
     }
 
-  componentDidUnmount() {
+  componentWillUnmount() {
     this.subscription.remove();
     console.log('Unmounted')
   }
