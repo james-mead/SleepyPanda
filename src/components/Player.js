@@ -6,11 +6,36 @@ import {
   TouchableHighlight } from 'react-native'
 import Icon from 'react-native-vector-icons/FontAwesome'
 import { SliderVolumeController } from 'react-native-volume-controller'
+import Orientation from 'react-native-orientation'
 
 export default class Player extends Component {
   constructor (props) {
     super(props)
+    this.state = {
+      deviceOrientation: null
+    }
   }
+
+  componentDidMount() {
+    const initial = Orientation.getInitialOrientation()
+    console.log('Initial Orientation: ', initial)
+    Orientation.addOrientationListener(this._orientationDidChange);
+  }
+
+  _orientationDidChange = (orientation) => {
+    this.setState({
+      deviceOrientation: orientation
+    })
+  }
+
+  componentWillUnmount() {
+    Orientation.getOrientation((err, orientation) => {
+      console.log(`Current Device Orientation: ${orientation}`);
+    })
+    // Remember to remove listener
+    Orientation.removeOrientationListener(this._orientationDidChange);
+  }
+
   render () {
     return (
       <View style={style.container}>

@@ -3,6 +3,7 @@ package com.sleepypanda;
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
+import com.github.yamill.orientation.OrientationPackage;
 import com.tavernari.volumecontroller.ReactNativeVolumeControllerPackage;
 import com.tanguyantoine.react.MusicControl;
 import com.oblador.vectoricons.VectorIconsPackage;
@@ -27,6 +28,7 @@ public class MainApplication extends Application implements ReactApplication {
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
+            new OrientationPackage(),
             new ReactNativeVolumeControllerPackage(),
             new MusicControl(),
             new VectorIconsPackage(),

@@ -95,7 +95,6 @@ export default class SoundList extends Component {
 
     playSound = () => {
       console.log('playing: ', this.state.soundName)
-      console.log('image: ', this.state.soundImage)
         this.setState({
           loadedSound: this.state.loadedSound.setNumberOfLoops(-1).setVolume(0.1).play(),
           playing: true
