@@ -31,7 +31,7 @@ local.properties
 *.iml
 
 # vscode
-.vscode/
+.vscode
 
 # node.js
 #
