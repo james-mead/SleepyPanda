@@ -35,8 +35,8 @@ local.properties
 
 # node.js
 #
-!node_modules/react-native-sound
 node_modules/*
+!node_modules/react-native-sound/
 npm-debug.log
 yarn-error.log
 
