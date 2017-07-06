@@ -10,7 +10,6 @@ import {
   DeviceEventEmitter
 } from 'react-native'
 import MusicControl from 'react-native-music-control'
-// import resolveAssetSource from 'react-native/Libraries/Image/resolveAssetSource'
 
 import soundData from '../data/sounds'
 import SoundListItem from './SoundListItem'
@@ -149,9 +148,6 @@ export default class SoundList extends Component {
           playSound()
         }
       })
-      // this.eventEmitter.addListener('audioEvent',(data) => {
-      //   console.log(data);
-      // })
       MusicControl.enableBackgroundMode(true)
       MusicControl.enableControl('play', true)
       MusicControl.enableControl('pause', true)
@@ -164,7 +160,7 @@ export default class SoundList extends Component {
     }
 
   componentWillUnmount() {
-    this.subscription.remove();
+    this.subscription.remove()
     console.log('Unmounted')
   }
 

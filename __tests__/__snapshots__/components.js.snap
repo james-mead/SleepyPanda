@@ -38,8 +38,8 @@ exports[`Header (Snapshot) Renders the Header Component 1`] = `
     style={
       Object {
         "backgroundColor": "transparent",
-        "height": 70,
-        "width": 100,
+        "height": 40,
+        "width": 60,
       }
     }
   />
@@ -59,108 +59,5 @@ exports[`Header (Snapshot) Renders the Header Component 1`] = `
   >
     Sleepy Panda
   </Text>
-</View>
-`;
-
-exports[`Player (Snapshot) Renders the Player Component 1`] = `
-<View
-  style={
-    Object {
-      "alignItems": "center",
-      "backgroundColor": "#7A8B98",
-      "borderTopColor": "#FFFFFF",
-      "borderTopWidth": 0.5,
-      "bottom": 0,
-      "flex": 1,
-      "flexDirection": "row",
-      "height": 100,
-      "justifyContent": "center",
-      "left": 0,
-      "padding": 10,
-      "position": "absolute",
-      "right": 0,
-    }
-  }
->
-  <View
-    style={
-      Object {
-        "alignItems": "center",
-        "backgroundColor": "gray",
-        "borderRadius": 10,
-        "height": 70,
-        "left": 10,
-        "position": "absolute",
-        "shadowColor": "#000000",
-        "shadowOffset": Object {
-          "height": 2,
-          "width": 2,
-        },
-        "shadowOpacity": 0.8,
-        "shadowRadius": 2,
-        "width": 70,
-      }
-    }
-  >
-    <Image
-      source={undefined}
-      style={
-        Object {
-          "borderRadius": 10,
-          "height": 70,
-          "width": 70,
-        }
-      }
-    />
-  </View>
-  <View
-    accessibilityComponentType={undefined}
-    accessibilityLabel={undefined}
-    accessibilityTraits={undefined}
-    accessible={true}
-    hasTVPreferredFocus={undefined}
-    hitSlop={undefined}
-    isTVSelectable={true}
-    onLayout={undefined}
-    onResponderGrant={[Function]}
-    onResponderMove={[Function]}
-    onResponderRelease={[Function]}
-    onResponderTerminate={[Function]}
-    onResponderTerminationRequest={[Function]}
-    onStartShouldSetResponder={[Function]}
-    style={
-      Array [
-        Object {
-          "backgroundColor": "transparent",
-        },
-        undefined,
-      ]
-    }
-    testID={undefined}
-    tvParallaxProperties={undefined}
-  >
-    <Text
-      accessible={true}
-      allowFontScaling={false}
-      className="icon"
-      ellipsizeMode="tail"
-      style={
-        Array [
-          Object {
-            "color": "#FFF",
-            "fontSize": 30,
-          },
-          undefined,
-          Object {
-            "fontFamily": "FontAwesome",
-            "fontStyle": "normal",
-            "fontWeight": "normal",
-          },
-        ]
-      }
-    >
-      
-    </Text>
-  </View>
 </View>
 `;
