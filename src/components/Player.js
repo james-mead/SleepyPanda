@@ -95,6 +95,6 @@ const style = StyleSheet.create({
       marginTop: 10
     },
     volumeController: {
-      marginTop: 20
+      marginTop: 15
     }
 });
