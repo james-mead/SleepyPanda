@@ -7,16 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		000907761EEE471D0015BD7F /* distant_thunder.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0009076C1EEE471D0015BD7F /* distant_thunder.mp3 */; };
-		000907771EEE471D0015BD7F /* gentle_rain.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0009076D1EEE471D0015BD7F /* gentle_rain.mp3 */; };
-		000907781EEE471D0015BD7F /* heavy_rain.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0009076E1EEE471D0015BD7F /* heavy_rain.mp3 */; };
-		000907791EEE471D0015BD7F /* native_birds.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0009076F1EEE471D0015BD7F /* native_birds.mp3 */; };
-		0009077A1EEE471D0015BD7F /* ocean_waves_on_rocks.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 000907701EEE471D0015BD7F /* ocean_waves_on_rocks.mp3 */; };
-		0009077B1EEE471D0015BD7F /* ocean_waves_on_shore.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 000907711EEE471D0015BD7F /* ocean_waves_on_shore.mp3 */; };
-		0009077C1EEE471D0015BD7F /* rain_on_tent.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 000907721EEE471D0015BD7F /* rain_on_tent.mp3 */; };
-		0009077D1EEE471D0015BD7F /* river_stream.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 000907731EEE471D0015BD7F /* river_stream.mp3 */; };
-		0009077E1EEE471D0015BD7F /* waterfall.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 000907741EEE471D0015BD7F /* waterfall.mp3 */; };
-		0009077F1EEE471D0015BD7F /* womb.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 000907751EEE471D0015BD7F /* womb.mp3 */; };
 		0049CDB41EC557FE005F0576 /* Entypo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0049CDAA1EC557FE005F0576 /* Entypo.ttf */; };
 		0049CDB51EC557FE005F0576 /* EvilIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0049CDAB1EC557FE005F0576 /* EvilIcons.ttf */; };
 		0049CDB61EC557FE005F0576 /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0049CDAC1EC557FE005F0576 /* FontAwesome.ttf */; };
@@ -27,6 +17,18 @@
 		0049CDBB1EC557FE005F0576 /* Octicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0049CDB11EC557FE005F0576 /* Octicons.ttf */; };
 		0049CDBC1EC557FE005F0576 /* SimpleLineIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0049CDB21EC557FE005F0576 /* SimpleLineIcons.ttf */; };
 		0049CDBD1EC557FE005F0576 /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0049CDB31EC557FE005F0576 /* Zocial.ttf */; };
+		0086B9521F18CA17003B0EBE /* distant_thunder.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0086B9461F18CA17003B0EBE /* distant_thunder.mp3 */; };
+		0086B9531F18CA17003B0EBE /* driving_in_rain.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0086B9471F18CA17003B0EBE /* driving_in_rain.mp3 */; };
+		0086B9541F18CA17003B0EBE /* fireplace.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0086B9481F18CA17003B0EBE /* fireplace.mp3 */; };
+		0086B9551F18CA17003B0EBE /* gentle_rain.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0086B9491F18CA17003B0EBE /* gentle_rain.mp3 */; };
+		0086B9561F18CA17003B0EBE /* heavy_rain.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0086B94A1F18CA17003B0EBE /* heavy_rain.mp3 */; };
+		0086B9571F18CA17003B0EBE /* native_birds.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0086B94B1F18CA17003B0EBE /* native_birds.mp3 */; };
+		0086B9581F18CA17003B0EBE /* ocean_waves_on_rocks.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0086B94C1F18CA17003B0EBE /* ocean_waves_on_rocks.mp3 */; };
+		0086B9591F18CA17003B0EBE /* rain_on_tent.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0086B94D1F18CA17003B0EBE /* rain_on_tent.mp3 */; };
+		0086B95A1F18CA17003B0EBE /* river_stream.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0086B94E1F18CA17003B0EBE /* river_stream.mp3 */; };
+		0086B95B1F18CA17003B0EBE /* waterfall.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0086B94F1F18CA17003B0EBE /* waterfall.mp3 */; };
+		0086B95C1F18CA17003B0EBE /* wind_chimes.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0086B9501F18CA17003B0EBE /* wind_chimes.mp3 */; };
+		0086B95D1F18CA17003B0EBE /* womb.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0086B9511F18CA17003B0EBE /* womb.mp3 */; };
 		00C302E51ABCBA2D00DB3ED1 /* libRCTActionSheet.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302AC1ABCB8CE00DB3ED1 /* libRCTActionSheet.a */; };
 		00C302E71ABCBA2D00DB3ED1 /* libRCTGeolocation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302BA1ABCB90400DB3ED1 /* libRCTGeolocation.a */; };
 		00C302E81ABCBA2D00DB3ED1 /* libRCTImage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302C01ABCB91800DB3ED1 /* libRCTImage.a */; };
@@ -297,16 +299,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0009076C1EEE471D0015BD7F /* distant_thunder.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = distant_thunder.mp3; sourceTree = "<group>"; };
-		0009076D1EEE471D0015BD7F /* gentle_rain.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = gentle_rain.mp3; sourceTree = "<group>"; };
-		0009076E1EEE471D0015BD7F /* heavy_rain.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = heavy_rain.mp3; sourceTree = "<group>"; };
-		0009076F1EEE471D0015BD7F /* native_birds.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = native_birds.mp3; sourceTree = "<group>"; };
-		000907701EEE471D0015BD7F /* ocean_waves_on_rocks.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ocean_waves_on_rocks.mp3; sourceTree = "<group>"; };
-		000907711EEE471D0015BD7F /* ocean_waves_on_shore.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ocean_waves_on_shore.mp3; sourceTree = "<group>"; };
-		000907721EEE471D0015BD7F /* rain_on_tent.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = rain_on_tent.mp3; sourceTree = "<group>"; };
-		000907731EEE471D0015BD7F /* river_stream.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = river_stream.mp3; sourceTree = "<group>"; };
-		000907741EEE471D0015BD7F /* waterfall.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = waterfall.mp3; sourceTree = "<group>"; };
-		000907751EEE471D0015BD7F /* womb.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = womb.mp3; sourceTree = "<group>"; };
 		0049CDAA1EC557FE005F0576 /* Entypo.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Entypo.ttf; sourceTree = "<group>"; };
 		0049CDAB1EC557FE005F0576 /* EvilIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = EvilIcons.ttf; sourceTree = "<group>"; };
 		0049CDAC1EC557FE005F0576 /* FontAwesome.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome.ttf; sourceTree = "<group>"; };
@@ -317,6 +309,18 @@
 		0049CDB11EC557FE005F0576 /* Octicons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Octicons.ttf; sourceTree = "<group>"; };
 		0049CDB21EC557FE005F0576 /* SimpleLineIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SimpleLineIcons.ttf; sourceTree = "<group>"; };
 		0049CDB31EC557FE005F0576 /* Zocial.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Zocial.ttf; sourceTree = "<group>"; };
+		0086B9461F18CA17003B0EBE /* distant_thunder.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = distant_thunder.mp3; sourceTree = "<group>"; };
+		0086B9471F18CA17003B0EBE /* driving_in_rain.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = driving_in_rain.mp3; sourceTree = "<group>"; };
+		0086B9481F18CA17003B0EBE /* fireplace.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = fireplace.mp3; sourceTree = "<group>"; };
+		0086B9491F18CA17003B0EBE /* gentle_rain.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = gentle_rain.mp3; sourceTree = "<group>"; };
+		0086B94A1F18CA17003B0EBE /* heavy_rain.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = heavy_rain.mp3; sourceTree = "<group>"; };
+		0086B94B1F18CA17003B0EBE /* native_birds.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = native_birds.mp3; sourceTree = "<group>"; };
+		0086B94C1F18CA17003B0EBE /* ocean_waves_on_rocks.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ocean_waves_on_rocks.mp3; sourceTree = "<group>"; };
+		0086B94D1F18CA17003B0EBE /* rain_on_tent.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = rain_on_tent.mp3; sourceTree = "<group>"; };
+		0086B94E1F18CA17003B0EBE /* river_stream.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = river_stream.mp3; sourceTree = "<group>"; };
+		0086B94F1F18CA17003B0EBE /* waterfall.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = waterfall.mp3; sourceTree = "<group>"; };
+		0086B9501F18CA17003B0EBE /* wind_chimes.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = wind_chimes.mp3; sourceTree = "<group>"; };
+		0086B9511F18CA17003B0EBE /* womb.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = womb.mp3; sourceTree = "<group>"; };
 		008F07F21AC5B25A0029DE68 /* main.jsbundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = main.jsbundle; sourceTree = "<group>"; };
 		00C302A71ABCB8CE00DB3ED1 /* RCTActionSheet.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTActionSheet.xcodeproj; path = "../node_modules/react-native/Libraries/ActionSheetIOS/RCTActionSheet.xcodeproj"; sourceTree = "<group>"; };
 		00C302B51ABCB90400DB3ED1 /* RCTGeolocation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTGeolocation.xcodeproj; path = "../node_modules/react-native/Libraries/Geolocation/RCTGeolocation.xcodeproj"; sourceTree = "<group>"; };
@@ -661,6 +665,18 @@
 		DAD84A2B000A4D1F921BA164 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				0086B9461F18CA17003B0EBE /* distant_thunder.mp3 */,
+				0086B9471F18CA17003B0EBE /* driving_in_rain.mp3 */,
+				0086B9481F18CA17003B0EBE /* fireplace.mp3 */,
+				0086B9491F18CA17003B0EBE /* gentle_rain.mp3 */,
+				0086B94A1F18CA17003B0EBE /* heavy_rain.mp3 */,
+				0086B94B1F18CA17003B0EBE /* native_birds.mp3 */,
+				0086B94C1F18CA17003B0EBE /* ocean_waves_on_rocks.mp3 */,
+				0086B94D1F18CA17003B0EBE /* rain_on_tent.mp3 */,
+				0086B94E1F18CA17003B0EBE /* river_stream.mp3 */,
+				0086B94F1F18CA17003B0EBE /* waterfall.mp3 */,
+				0086B9501F18CA17003B0EBE /* wind_chimes.mp3 */,
+				0086B9511F18CA17003B0EBE /* womb.mp3 */,
 				50E2A0EC27694E46B1B99324 /* Entypo.ttf */,
 				7493BD5211FB4AEC94CB614C /* EvilIcons.ttf */,
 				31C20E7EFCC74F9FB43F311E /* FontAwesome.ttf */,
@@ -671,16 +687,6 @@
 				6D02C7CFF1804EF4B5B86956 /* Octicons.ttf */,
 				B7F98C1343D7497A8D2241F6 /* SimpleLineIcons.ttf */,
 				D88C96682F874A40B9197B12 /* Zocial.ttf */,
-				0009076C1EEE471D0015BD7F /* distant_thunder.mp3 */,
-				0009076D1EEE471D0015BD7F /* gentle_rain.mp3 */,
-				0009076E1EEE471D0015BD7F /* heavy_rain.mp3 */,
-				0009076F1EEE471D0015BD7F /* native_birds.mp3 */,
-				000907701EEE471D0015BD7F /* ocean_waves_on_rocks.mp3 */,
-				000907711EEE471D0015BD7F /* ocean_waves_on_shore.mp3 */,
-				000907721EEE471D0015BD7F /* rain_on_tent.mp3 */,
-				000907731EEE471D0015BD7F /* river_stream.mp3 */,
-				000907741EEE471D0015BD7F /* waterfall.mp3 */,
-				000907751EEE471D0015BD7F /* womb.mp3 */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -1113,27 +1119,29 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				000907771EEE471D0015BD7F /* gentle_rain.mp3 in Resources */,
+				0086B9571F18CA17003B0EBE /* native_birds.mp3 in Resources */,
 				0049CDBB1EC557FE005F0576 /* Octicons.ttf in Resources */,
-				000907761EEE471D0015BD7F /* distant_thunder.mp3 in Resources */,
+				0086B9521F18CA17003B0EBE /* distant_thunder.mp3 in Resources */,
+				0086B9561F18CA17003B0EBE /* heavy_rain.mp3 in Resources */,
 				0049CDB71EC557FE005F0576 /* Foundation.ttf in Resources */,
-				0009077C1EEE471D0015BD7F /* rain_on_tent.mp3 in Resources */,
-				0009077E1EEE471D0015BD7F /* waterfall.mp3 in Resources */,
-				0009077B1EEE471D0015BD7F /* ocean_waves_on_shore.mp3 in Resources */,
-				000907781EEE471D0015BD7F /* heavy_rain.mp3 in Resources */,
 				0049CDBA1EC557FE005F0576 /* MaterialIcons.ttf in Resources */,
+				0086B9581F18CA17003B0EBE /* ocean_waves_on_rocks.mp3 in Resources */,
+				0086B9541F18CA17003B0EBE /* fireplace.mp3 in Resources */,
 				0049CDBD1EC557FE005F0576 /* Zocial.ttf in Resources */,
+				0086B9551F18CA17003B0EBE /* gentle_rain.mp3 in Resources */,
 				0049CDB81EC557FE005F0576 /* Ionicons.ttf in Resources */,
 				0049CDBC1EC557FE005F0576 /* SimpleLineIcons.ttf in Resources */,
 				0049CDB41EC557FE005F0576 /* Entypo.ttf in Resources */,
-				0009077D1EEE471D0015BD7F /* river_stream.mp3 in Resources */,
+				0086B95A1F18CA17003B0EBE /* river_stream.mp3 in Resources */,
+				0086B95B1F18CA17003B0EBE /* waterfall.mp3 in Resources */,
+				0086B9591F18CA17003B0EBE /* rain_on_tent.mp3 in Resources */,
+				0086B9531F18CA17003B0EBE /* driving_in_rain.mp3 in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				0049CDB51EC557FE005F0576 /* EvilIcons.ttf in Resources */,
-				000907791EEE471D0015BD7F /* native_birds.mp3 in Resources */,
-				0009077F1EEE471D0015BD7F /* womb.mp3 in Resources */,
 				0049CDB91EC557FE005F0576 /* MaterialCommunityIcons.ttf in Resources */,
-				0009077A1EEE471D0015BD7F /* ocean_waves_on_rocks.mp3 in Resources */,
 				0049CDB61EC557FE005F0576 /* FontAwesome.ttf in Resources */,
+				0086B95D1F18CA17003B0EBE /* womb.mp3 in Resources */,
+				0086B95C1F18CA17003B0EBE /* wind_chimes.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
